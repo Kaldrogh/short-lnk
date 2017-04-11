@@ -1,0 +1,19 @@
+.header {
+  background-color: $header-bg;
+  color: $header-color;
+
+}
+.header__content {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: $site-max-width;
+  padding: $space;
+}
+.header__title {
+  margin: 0;
+  font-weight: lighter;
+  font-size: 2.4rem;
+  display: inline-block;
+}

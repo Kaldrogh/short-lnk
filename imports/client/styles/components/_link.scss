@@ -1,0 +1,29 @@
+.link {
+  background-color: #f9f9f9;
+  border: 1px solid darken(#f9f9f9, 8%);
+  margin-bottom: 1.3rem;
+  padding: 1.3rem;
+}
+
+.link__title {
+  font-weight: 500;
+}
+
+.link__short-url {
+  color: $orange;
+}
+
+.stats-block {
+  color: #555555;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.stats-block__visits {
+  font-weight: 500;
+  font-style: normal;
+}
+
+.stats-block__visits__last-visit {
+  font-weight: 300;
+}

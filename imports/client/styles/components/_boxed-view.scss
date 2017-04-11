@@ -1,0 +1,43 @@
+.boxed-view{
+  align-items: center;
+  background: $boxed-view-overlay-bg;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+.boxed-view--modal {
+  background: fade-out($boxed-view-overlay-bg, 0.3);
+  bottom: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.boxed-view__box{
+  background-color: $boxed-view-bg;
+  padding: 2.4rem;
+  text-align: center;
+  width: 32rem;
+  -webkit-box-shadow: $box-shadow;
+-moz-box-shadow: $box-shadow;
+box-shadow: $box-shadow;
+}
+
+.boxed-view__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.boxed-view__code {
+  background-color: #dddddd;
+  color: $blue;
+  padding: 0.4rem;
+  margin-right: 0.4rem;
+}
+
+.boxed-view__box__error {
+  color: $red;
+}
