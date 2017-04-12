@@ -62,5 +62,17 @@ Meteor.methods({
                 visitedCount: 1
             }
         })
+    },
+    'links.remove'(_id) {
+      if(!this.userId) {
+        throw new Meteor.Error("not-authorized", "you are not allowed to remove a link.");
+      }
+      new SimpleSchema({
+        _id: {
+          type: String,
+          min: 1
+        }
+      }).validate({_id});
+      Links.remove({_id});
     }
 });

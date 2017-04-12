@@ -23,7 +23,7 @@ export default class LinkList extends BindFactory {
         this.linksTracker = Tracker.autorun(() => {
             Meteor.subscribe('links');
 
-            const links = Links.find({visible: Session.get('showVisible')}).fetch();
+            const links = Links.find({visible: Session.get('showVisible')}, { sort: {createAt: -1}}).fetch();
             this.setState({links: links, initialLinks : links});
         });
     }
