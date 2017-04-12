@@ -33,7 +33,7 @@ export default class LinkListItem extends React.Component {
     renderVariousStats() {
 
         const hasBeenVisitedMessage = this.props.visitedCount < 2 ? 'vue' : 'vues';
-        let hasBeenVisited = this.props.lastVisitedAt ? `Last visit : ${moment(this.props.lastVisitedAt).format('DD MMMM YYYY - HH:mm:ss').toString()}, ${moment(this.props.lastVisitedAt).fromNow()}` : null;
+        const hasBeenVisited = this.props.lastVisitedAt ? `Last visit : ${moment(this.props.lastVisitedAt).format('DD MMMM YYYY - HH:mm:ss').toString()}, ${moment(this.props.lastVisitedAt).fromNow()}` : null;
 
         return (
             <div className="stats-block">
