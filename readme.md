@@ -1,1 +1,1 @@
-Short Lnk
+Short Lnk - A link shortener app.
