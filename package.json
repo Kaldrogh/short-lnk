@@ -22,14 +22,15 @@
     "react-tap-event-plugin": "^2.0.1",
     "shortid": "^2.2.8",
     "simpl-schema": "^0.2.3",
-    "underscore": "^1.8.3"
-  },
-  "devDependencies": {
+    "underscore": "^1.8.3",
     "babel-plugin-transform-class-properties": "^6.24.1"
   },
   "babel": {
     "plugins": [
       "transform-class-properties"
     ]
+  },
+  "engines": {
+    "node": "4.8.0"
   }
 }
