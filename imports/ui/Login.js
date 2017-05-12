@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {Component} from 'react';
+import {withRouter} from "react-router-dom";
 import { Link } from 'react-router-dom';
 import { Meteor } from 'meteor/meteor';
 
-class Login extends React.Component {
+class Login extends Component {
   constructor(props) {
     super(props);
 
@@ -22,6 +23,7 @@ class Login extends React.Component {
         this.setState({error: 'Unable to login. Check your credentials.'});
       } else {
         this.setState({error: ''});
+        this.props.history.push("/links");
       }
     });
   }
@@ -45,4 +47,5 @@ class Login extends React.Component {
   }
 }
 
-export default Login;
+const LoginWithRouter = withRouter(Login);
+export default LoginWithRouter;

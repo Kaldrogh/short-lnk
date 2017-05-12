@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {Component} from 'react';
+import {withRouter} from "react-router-dom";
 import {Link} from 'react-router-dom';
 import {Accounts} from 'meteor/accounts-base';
 
-export default class Signup extends React.Component {
+class Signup extends Component {
     constructor(props) {
         super(props);
 
@@ -28,6 +29,7 @@ export default class Signup extends React.Component {
                 this.setState({error: err.reason});
             } else {
                 this.setState({error: ''});
+                this.props.history.push("/links");
             }
         });
     }
@@ -52,3 +54,6 @@ export default class Signup extends React.Component {
         );
     }
 }
+
+const SignupWithRouter = withRouter(Signup);
+export default SignupWithRouter;
