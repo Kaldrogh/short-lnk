@@ -8,7 +8,7 @@ class PrivateHeader extends Component {
     this.LogOut = this.LogOut.bind(this);
   }
   componentWillMount() {
-    if (!Meteor.userId) {
+    if (!Meteor.userId()) {
       this.props.history.push("/");
     }
   }

@@ -13,6 +13,11 @@ class Signup extends Component {
             error: ''
         };
     }
+    componentWillMount() {
+        if (Meteor.userId()) {
+            this.props.history.push("/links");
+        }
+    }
     onSubmit(e) {
         e.preventDefault();
         let email = this.refs.email.value.trim();
